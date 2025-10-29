@@ -1,0 +1,220 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #f0f0f0;
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 4rem;
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #00bcd4;
+}
+.nav-links a {
+  color: #f0f0f0;
+  margin-left: 2rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-links a:hover {
+  color: #00bcd4;
+}
+
+/* HERO */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1050&q=80') center/cover no-repeat;
+}
+.hero-content {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2rem 3rem;
+  border-radius: 15px;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  color: #00e5ff;
+}
+.hero p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #e0e0e0;
+}
+.highlight {
+  color: #00bcd4;
+  font-weight: bold;
+}
+.btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: #00bcd4;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: #0097a7;
+  transform: translateY(-3px);
+}
+
+/* SECTION */
+section {
+  padding: 5rem 10%;
+}
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  color: #00e5ff;
+}
+
+/* SKILLS */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+.skill-card {
+  background: rgba(255, 255, 255, 0.08);
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.skill-card i {
+  font-size: 2rem;
+  color: #00bcd4;
+  margin-bottom: 1rem;
+}
+.skill-card:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 188, 212, 0.2);
+}
+.skill-desc {
+  display: none;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #ccc;
+  transition: all 0.4s ease;
+}
+.skill-card.active .skill-desc {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(-5px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+/* PROJECTS */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+.project-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  background: rgba(0, 188, 212, 0.2);
+}
+.project-card h3 {
+  color: #00e5ff;
+  margin-bottom: 0.5rem;
+}
+
+/* CONTACT */
+.contact-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+.contact-card {
+  flex: 1 1 300px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+.socials a {
+  display: block;
+  margin: 8px 0;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+.socials a i {
+  margin-right: 10px;
+}
+.socials a:hover {
+  color: #00bcd4;
+}
+form input, form textarea {
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+}
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.cta-btn {
+  background: transparent;
+  border: 2px solid #00bcd4;
+  color: #00bcd4;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  transition: 0.3s;
+}
+.cta-btn:hover {
+  background: #00bcd4;
+  color: #fff;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.5);
+  color: #aaa;
+  font-size: 0.9rem;
+}
+@media(max-width:768px) {
+  header { flex-direction: column; }
+  .hero h1 { font-size: 2rem; }
+}
